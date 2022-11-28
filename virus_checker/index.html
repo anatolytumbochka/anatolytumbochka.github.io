@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,700;1,300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="logo">Сравнение вирусов</h1>
+            <div class="nav">
+                <button id="nav_button" class="upload_button">Загрузить</button>
+                <button id="nav_button" class="analysis_button">Анализировать</button>
+                <button id="nav_button" class="about_us_button">О нас</button>
+            </div>
+        </div>
+        <div class="upload" id="animation">
+            <h2>Здесь вы можете загрузить 2 вируса в формате <i>fasta</i> или <i>txt</i>, а также геном в таких же форматах. Не забудьте назвать папку, в которую хотите поместить образцы, — иначе она будет названа случайным образом!</h2>
+            <form action="/send_file" method="post" enctype="multipart/form-data" class="upload_form" id="file-upload">
+                <input type="file" name="avatar" id="file" multiple>
+                <div class="padding_div">
+                    <label for="file" class="upload_label">Выбрать файл</label>
+                    <input type="submit" name="submit" value="Загрузить" class="submit_button">
+                </div>
+                <input type="text" name="folder_name" placeholder="Название папки" class="folder_name_input">
+            </form>
+        </div>
+        <div class="analysis" id="animation">
+            <h2>Здесь вы можете выбирать ваши папки для анализа. После завершения процесса вы увидите сравнение вирусов, где отличающиеся части будут выделены <font color="red">красным</font> цветом.</h2>
+            <h2 class="files_list_text">Загруженные вами файлы:</h1>
+            <h2 class="files"></h2>
+            <div class="loader_div">
+                <div class="loader"></div>
+            </div>
+            <div class="after_loading">
+                <h2 class="output_logo"></h2>
+                <h2 class="output"></h2>
+                <h2 class="output_info"></h2>
+                <div class="download_result_logo"><h2 style="padding-right: 0.5%;" class="download_result_element">Вы можете </h2><a class="link download_result_element" id="nav_button" download>загрузить</a><h2 style="padding-left: 0.5%;" class="download_result_element"> подробный результат анализа.</h2></div>
+            </div>
+        </div>
+        <div class="about_us" id="animation">
+            <h2>Благодаря нашей программе люди смогут сравнивать вирусы и получать данные в самой удобной форме. Проект находится на ранней стадии создания, однако наша команда готова продолжать работать над созданием готового продукта, который станет верным помощником многим биологам.<br><br>Также мы заинтересованы в расширении функционала, чтобы приложение затрагивало как можно большее количество проблем, появляющихся при работе с файлами вирусов, и, соотвественно, решало их.</h2>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

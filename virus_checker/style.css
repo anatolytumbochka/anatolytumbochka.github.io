@@ -1,0 +1,218 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/cool-background (1).png");
+}
+
+body, button, input[type="submit"] {
+    font-family: 'Exo 2', sans-serif;
+}
+
+h2 {
+    font-weight: 300;
+}
+
+#nav_button {
+    border: 0;
+    cursor: pointer;
+    font-size: 150%;
+    background: 0;
+
+    transition: color .35s linear;
+}
+
+#nav_button:hover {
+    color: #4CAF50;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    padding-top: 2.5%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo::before {
+    content: 'Сравнение вирусов';
+    position: absolute;
+    color: #4040a1;
+    width: 0;
+    overflow-x: hidden;
+    white-space: nowrap;
+    transition: width 1s ease-in-out;
+}
+
+.logo {
+    position: relative;
+    width: 55%;
+    font-size: 350%;
+}
+
+.logo:hover:before {
+    width: 100%;
+}
+
+.upload, .upload_form, .analysis, .files_list_text, .founded_matches_text, .files, .output, .upload_information,
+.genome, .genome_bar, .number_of_matches_text, .number_of_matches, .choose_genome_text, .genomes, .output_info,
+.about_us, .result_link, .loader_div, .output_logo {
+    padding-top: 2.5%;
+}
+
+.files_list_text, .founded_matches_text, .files, .choose_genome_text, .genomes, .output_logo {
+    text-align: center;
+}
+
+.analysis_button {
+    padding: 0 15px;
+}
+
+.loaded_file_button, .upload_label, .submit_button, .start_uploading_button, .number_of_matches_button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #4CAF50;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 70%;
+
+    transition-duration: 0.4s;
+}
+
+.loaded_file_button:hover, .upload_label:hover, .submit_button:hover, .start_uploading_button:hover,
+.number_of_matches_button:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.files, .genomes {
+    display: flex;
+    justify-content: center;
+}
+
+.loaded_file_div {
+    padding: 0 10px;
+}
+
+@keyframes showBlock {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+#animation {
+    animation: showBlock .5s linear forwards;
+}
+
+.output {
+    text-align: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.output_text {
+    font-size: 100%;
+}
+
+#file {
+    display: none;
+}
+
+.padding_div {
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.upload_form {
+    text-align: center;
+    align-items: center;
+}
+
+.upload_label, .submit_button, .start_uploading_button, input[type=text], .number_of_matches_button {
+    font-size: 100%;
+    padding: 15px 50px;
+}
+
+.folder_name_input {
+    border: 2px solid red;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    transition: border .5s linear;
+}
+
+.folder_name_input:hover {
+    border: 2px solid black;
+}
+
+.output_test {
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+
+.virus_div {
+    display: flex;
+}
+
+.color_virus {
+    color: red;
+    padding: 0 0.6%;
+}
+
+a {
+    text-decoration: none;
+    color: #cd7f32;
+}
+
+.loader {
+    border: 8px solid #f3f3f3;
+    border-top: 8px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.download_result_logo {
+    display: flex;
+}
